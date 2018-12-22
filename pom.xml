@@ -14,6 +14,7 @@
         <module>Kids</module>
         <module>Lady</module>
         <module>Pets</module>
+        <module>Weather</module>
     </modules>
 
     <properties>

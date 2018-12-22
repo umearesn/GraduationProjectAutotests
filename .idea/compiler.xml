@@ -11,6 +11,7 @@
         <module name="Kids" />
         <module name="Lady" />
         <module name="Pets" />
+        <module name="Weather" />
       </profile>
     </annotationProcessing>
   </component>
