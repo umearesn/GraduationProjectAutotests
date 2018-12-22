@@ -77,14 +77,4 @@ public class BasePage<T> {
         return (T) this;
     }
 
-    /*public KidsMainPage checkURLFormat(){
-        Pattern pattern = Pattern.compile("https:\\/\\/deti\\.mail\\.ru\\/[^ \\/]+\\/[^ \\/]+\\/");
-        Matcher matcher = pattern.matcher(WebDriverRunner.url());
-        System.out.println(WebDriverRunner.url());
-        assertTrue("Ссылка требуемого формата не открылась.", matcher.matches());
-        return this;
-    }*/
-
-
-
 }
