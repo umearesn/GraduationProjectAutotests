@@ -1,5 +1,4 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import mainUtilities.basicPages.BasePage;
@@ -7,19 +6,11 @@ import mainUtilities.commonElements.LoginWindow;
 import mainUtilities.pageNavigation.Domain;
 import mainUtilities.pageNavigation.PageToOpenURL;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.switchTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.openqa.selenium.support.ui.ExpectedConditions.frameToBeAvailableAndSwitchToIt;
 
 @Domain("https://lady.mail.ru")
 @PageToOpenURL("/recipe/add")
@@ -35,7 +26,7 @@ public class AddRecipe extends BasePage<AddRecipe> {
     }
 
     public AddRecipe logInto(String login, String pass){
-        WebDriverWait waiter = new WebDriverWait(WebDriverRunner.getWebDriver(), 20);
+        WebDriverWait waiter = new WebDriverWait(WebDriverRunner.getWebDriver(), 5);
         waiter.until(ExpectedConditions.
                 frameToBeAvailableAndSwitchToIt($(By.xpath("//iframe[@class='ag-popup__frame__layout__iframe']"))));
         new LoginWindow()

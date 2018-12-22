@@ -10,6 +10,7 @@
         <module name="Horoscope" />
         <module name="Kids" />
         <module name="Lady" />
+        <module name="Pets" />
       </profile>
     </annotationProcessing>
   </component>
