@@ -5,10 +5,8 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import mainUtilities.pageNavigation.Domain;
 import mainUtilities.pageNavigation.PageToOpenURL;
-import mainUtilities.pageNavigation.URL;
 import mainUtilities.urlChecker.URLPattern;
 
-import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
