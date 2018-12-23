@@ -1,5 +1,8 @@
+import mainUtilities.categories.Smoke;
+import mainUtilities.categories.SmokeWeather;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 public class Favourites_Test {
 
@@ -10,6 +13,7 @@ public class Favourites_Test {
                 .addCityToFavourites("Казань");
     }
 
+    @Category(SmokeWeather.class)
     @Test
     public void test_Favourites(){
         new Favourites()
