@@ -76,13 +76,22 @@
                 <configuration>
                     <parallel>all</parallel>
                     <threadCount>5</threadCount>
-                    <groups>mainUtilities.categories.Smoke,
+                    <groups>
+                        mainUtilities.categories.Smoke,
                         mainUtilities.categories.SmokeKids,
                         mainUtilities.categories.SmokeHoroscope,
                         mainUtilities.categories.SmokeLady,
                         mainUtilities.categories.SmokePets,
                         mainUtilities.categories.SmokeWeather
                     </groups>
+                    <!--includes>
+                        <include>**/Smoke.class</include>
+                        <include>**/SmokeHoroscope.class</include>
+                        <include>**/SmokeKids.class</include>
+                        <include>**/SmokeLady.class</include>
+                        <include>**/SmokePets.class</include>
+                        <include>**/SmokeWeather.class</include>
+                    </includes-->
                     <systemPropertyVariables>
                         <webdriver.timeouts.implicitlywait>${webdriver.timeouts.implicitlywait}</webdriver.timeouts.implicitlywait>
                     </systemPropertyVariables>
