@@ -58,6 +58,135 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+
+        <profile>
+            <id>SmokeAll</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20</version>
+                        <configuration>
+                            <parallel>all</parallel>
+                            <threadCount>5</threadCount>
+                            <groups>
+                                mainUtilities.categories.Smoke,
+                                mainUtilities.categories.SmokeKids,
+                                mainUtilities.categories.SmokeHoroscope,
+                                mainUtilities.categories.SmokeLady,
+                                mainUtilities.categories.SmokePets,
+                                mainUtilities.categories.SmokeWeather
+                            </groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>SmokeHoroscope</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20</version>
+                        <configuration>
+                            <parallel>all</parallel>
+                            <threadCount>5</threadCount>
+                            <groups>
+                                mainUtilities.categories.SmokeHoroscope
+                            </groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>SmokeKids</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20</version>
+                        <configuration>
+                            <parallel>all</parallel>
+                            <threadCount>5</threadCount>
+                            <groups>
+                                mainUtilities.categories.SmokeKids
+                            </groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>SmokeLady</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20</version>
+                        <configuration>
+                            <parallel>all</parallel>
+                            <threadCount>5</threadCount>
+                            <groups>
+                                mainUtilities.categories.SmokeLady
+                            </groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>SmokePets</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20</version>
+                        <configuration>
+                            <parallel>all</parallel>
+                            <threadCount>5</threadCount>
+                            <groups>
+                                mainUtilities.categories.SmokePets
+                            </groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>SmokeWeather</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20</version>
+                        <configuration>
+                            <parallel>all</parallel>
+                            <threadCount>5</threadCount>
+                            <groups>
+                                mainUtilities.categories.SmokeWeather
+                            </groups>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
@@ -84,14 +213,6 @@
                         mainUtilities.categories.SmokePets,
                         mainUtilities.categories.SmokeWeather
                     </groups>
-                    <!--includes>
-                        <include>**/Smoke.class</include>
-                        <include>**/SmokeHoroscope.class</include>
-                        <include>**/SmokeKids.class</include>
-                        <include>**/SmokeLady.class</include>
-                        <include>**/SmokePets.class</include>
-                        <include>**/SmokeWeather.class</include>
-                    </includes-->
                     <systemPropertyVariables>
                         <webdriver.timeouts.implicitlywait>${webdriver.timeouts.implicitlywait}</webdriver.timeouts.implicitlywait>
                     </systemPropertyVariables>

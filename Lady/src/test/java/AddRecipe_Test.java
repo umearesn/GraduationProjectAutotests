@@ -1,18 +1,15 @@
 import mainUtilities.categories.Smoke;
 import mainUtilities.categories.SmokeLady;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 import java.util.Scanner;
 
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-        Smoke.class,
-        SmokeLady.class
-})
 public class AddRecipe_Test {
 
+    @Category({Smoke.class, SmokeLady.class})
     @Test
     public void test_addingNewRecipe(){
         ClassLoader cl = Thread.currentThread().getContextClassLoader();

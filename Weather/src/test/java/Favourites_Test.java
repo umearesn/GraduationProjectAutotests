@@ -2,14 +2,10 @@ import mainUtilities.categories.Smoke;
 import mainUtilities.categories.SmokeWeather;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-        Smoke.class,
-        SmokeWeather.class
-})
 public class Favourites_Test {
 
     @Before
@@ -19,6 +15,7 @@ public class Favourites_Test {
                 .addCityToFavourites("Казань");
     }
 
+    @Category({Smoke.class, SmokeWeather.class})
     @Test
     public void test_Favourites(){
         new Favourites()
